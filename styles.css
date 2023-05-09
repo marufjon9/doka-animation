@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #fff6bd;
+}
+
+.box {
+  display: flex;
+  width: 500px;
+}
+
+.box-container {
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+
+.box-container + .box-container {
+  margin-left: 50px;
+}
+
+.box-container-one {
+  align-items: flex-start;
+  justify-content: end;
+}
+
+.box-container-two {
+  align-items: flex-end;
+}
+
+.box {
+  border-radius: 25px;
+}
+
+.box-one {
+  width: 50px;
+  height: 50px;
+  background-color: #ff55bb;
+  animation-name: circle-to-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+.box-two {
+  width: 200px;
+  height: 200px;
+  animation-name: circle-to-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in;
+}
+
+@keyframes circle-to-square {
+  from {
+    width: 50px;
+    height: 50px;
+    background-color: #f498ad;
+  }
+  50% {
+    width: 50px;
+    height: 200px;
+    background-color: #7f6edb;
+  }
+  to {
+    width: 200px;
+    height: 200px;
+    background-color: 16FF00;
+  }
+}
